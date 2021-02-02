@@ -1,0 +1,4 @@
+(executable
+ (name exemple)
+ (modules exemple)
+ (libraries yojson lwt cohttp cohttp-lwt-unix))

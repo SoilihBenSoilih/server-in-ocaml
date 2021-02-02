@@ -1,0 +1,114 @@
+# dune build exemple.exe --profile release
+# OCAMLPARAM: unset
+# Workspace root: /home/soilih/Bureau/Exemple2
+$ /usr/bin/nproc > /tmp/dunea2041f.output 2> /dev/null
+# Auto-detected concurrency: 2
+# disable binary cache
+$ /home/soilih/_opam/bin/ocamlc.opt -config > /tmp/dune7ee1dc.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Release
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/soilih/_opam/lib/toplevel"
+#  ; ocaml_bin = External "/home/soilih/_opam/bin"
+#  ; ocaml = Ok External "/home/soilih/_opam/bin/ocaml"
+#  ; ocamlc = External "/home/soilih/_opam/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/soilih/_opam/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/soilih/_opam/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/soilih/_opam/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/soilih/_opam/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/soilih/_opam/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/home/soilih/Bureau/Exemple2"
+#        ; "INSIDE_DUNE" : "/home/soilih/Bureau/Exemple2/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/soilih/Bureau/Exemple2/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/home/soilih/Bureau/Exemple2/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/soilih/Bureau/Exemple2/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/home/soilih/_opam/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.11.1"
+#      ; standard_library_default = "/home/soilih/_opam/lib/ocaml"
+#      ; standard_library = "/home/soilih/_opam/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X028"
+#      ; cmi_magic_number = "Caml1999I028"
+#      ; cmo_magic_number = "Caml1999O028"
+#      ; cma_magic_number = "Caml1999A028"
+#      ; cmx_magic_number = "Caml1999Y028"
+#      ; cmxa_magic_number = "Caml1999Z028"
+#      ; ast_impl_magic_number = "Caml1999M028"
+#      ; ast_intf_magic_number = "Caml1999N028"
+#      ; cmxs_magic_number = "Caml1999D028"
+#      ; cmt_magic_number = "Caml1999T028"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /home/soilih/_opam/bin/ocamlc.opt -w -40 -g -bin-annot -I .exemple.eobjs/byte -I /home/soilih/_opam/lib/angstrom -I /home/soilih/_opam/lib/astring -I /home/soilih/_opam/lib/base -I /home/soilih/_opam/lib/base/base_internalhash_types -I /home/soilih/_opam/lib/base/caml -I /home/soilih/_opam/lib/base/shadow_stdlib -I /home/soilih/_opam/lib/base64 -I /home/soilih/_opam/lib/bigarray-compat -I /home/soilih/_opam/lib/bigstringaf -I /home/soilih/_opam/lib/biniou -I /home/soilih/_opam/lib/bytes -I /home/soilih/_opam/lib/cohttp -I /home/soilih/_opam/lib/cohttp-lwt -I /home/soilih/_opam/lib/cohttp-lwt-unix -I /home/soilih/_opam/lib/conduit -I /home/soilih/_opam/lib/conduit-lwt -I /home/soilih/_opam/lib/conduit-lwt-unix -I /home/soilih/_opam/lib/domain-name -I /home/soilih/_opam/lib/easy-format -I /home/soilih/_opam/lib/fieldslib -I /home/soilih/_opam/lib/fmt -I /home/soilih/_opam/lib/ipaddr -I /home/soilih/_opam/lib/ipaddr-sexp -I /home/soilih/_opam/lib/ipaddr/unix -I /home/soilih/_opam/lib/logs -I /home/soilih/_opam/lib/lwt -I /home/soilih/_opam/lib/lwt/unix -I /home/soilih/_opam/lib/macaddr -I /home/soilih/_opam/lib/magic-mime -I /home/soilih/_opam/lib/mmap -I /home/soilih/_opam/lib/ocaml/threads -I /home/soilih/_opam/lib/ocplib-endian -I /home/soilih/_opam/lib/ocplib-endian/bigstring -I /home/soilih/_opam/lib/parsexp -I /home/soilih/_opam/lib/ppx_sexp_conv/runtime-lib -I /home/soilih/_opam/lib/re -I /home/soilih/_opam/lib/result -I /home/soilih/_opam/lib/seq -I /home/soilih/_opam/lib/sexplib -I /home/soilih/_opam/lib/sexplib0 -I /home/soilih/_opam/lib/stdlib-shims -I /home/soilih/_opam/lib/stringext -I /home/soilih/_opam/lib/uri -I /home/soilih/_opam/lib/uri-sexp -I /home/soilih/_opam/lib/uri/services -I /home/soilih/_opam/lib/yojson -no-alias-deps -o .exemple.eobjs/byte/dune__exe__Exemple.cmo -c -impl exemple.ml)
+$ (cd _build/default && /home/soilih/_opam/bin/ocamlopt.opt -w -40 -g -I .exemple.eobjs/byte -I .exemple.eobjs/native -I /home/soilih/_opam/lib/angstrom -I /home/soilih/_opam/lib/astring -I /home/soilih/_opam/lib/base -I /home/soilih/_opam/lib/base/base_internalhash_types -I /home/soilih/_opam/lib/base/caml -I /home/soilih/_opam/lib/base/shadow_stdlib -I /home/soilih/_opam/lib/base64 -I /home/soilih/_opam/lib/bigarray-compat -I /home/soilih/_opam/lib/bigstringaf -I /home/soilih/_opam/lib/biniou -I /home/soilih/_opam/lib/bytes -I /home/soilih/_opam/lib/cohttp -I /home/soilih/_opam/lib/cohttp-lwt -I /home/soilih/_opam/lib/cohttp-lwt-unix -I /home/soilih/_opam/lib/conduit -I /home/soilih/_opam/lib/conduit-lwt -I /home/soilih/_opam/lib/conduit-lwt-unix -I /home/soilih/_opam/lib/domain-name -I /home/soilih/_opam/lib/easy-format -I /home/soilih/_opam/lib/fieldslib -I /home/soilih/_opam/lib/fmt -I /home/soilih/_opam/lib/ipaddr -I /home/soilih/_opam/lib/ipaddr-sexp -I /home/soilih/_opam/lib/ipaddr/unix -I /home/soilih/_opam/lib/logs -I /home/soilih/_opam/lib/lwt -I /home/soilih/_opam/lib/lwt/unix -I /home/soilih/_opam/lib/macaddr -I /home/soilih/_opam/lib/magic-mime -I /home/soilih/_opam/lib/mmap -I /home/soilih/_opam/lib/ocaml/threads -I /home/soilih/_opam/lib/ocplib-endian -I /home/soilih/_opam/lib/ocplib-endian/bigstring -I /home/soilih/_opam/lib/parsexp -I /home/soilih/_opam/lib/ppx_sexp_conv/runtime-lib -I /home/soilih/_opam/lib/re -I /home/soilih/_opam/lib/result -I /home/soilih/_opam/lib/seq -I /home/soilih/_opam/lib/sexplib -I /home/soilih/_opam/lib/sexplib0 -I /home/soilih/_opam/lib/stdlib-shims -I /home/soilih/_opam/lib/stringext -I /home/soilih/_opam/lib/uri -I /home/soilih/_opam/lib/uri-sexp -I /home/soilih/_opam/lib/uri/services -I /home/soilih/_opam/lib/yojson -intf-suffix .ml -no-alias-deps -o .exemple.eobjs/native/dune__exe__Exemple.cmx -c -impl exemple.ml)
+$ (cd _build/default && /home/soilih/_opam/bin/ocamlopt.opt -w -40 -g -o exemple.exe /home/soilih/_opam/lib/easy-format/easy_format.cmxa /home/soilih/_opam/lib/biniou/biniou.cmxa /home/soilih/_opam/lib/yojson/yojson.cmxa /home/soilih/_opam/lib/result/result.cmxa /home/soilih/_opam/lib/lwt/lwt.cmxa /home/soilih/_opam/lib/re/re.cmxa /home/soilih/_opam/lib/stringext/stringext.cmxa /home/soilih/_opam/lib/bigarray-compat/bigarray_compat.cmxa /home/soilih/_opam/lib/bigstringaf/bigstringaf.cmxa -I /home/soilih/_opam/lib/bigstringaf /home/soilih/_opam/lib/angstrom/angstrom.cmxa /home/soilih/_opam/lib/uri/uri.cmxa /home/soilih/_opam/lib/sexplib0/sexplib0.cmxa /home/soilih/_opam/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmxa /home/soilih/_opam/lib/uri-sexp/uri_sexp.cmxa /home/soilih/_opam/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /home/soilih/_opam/lib/base/base_internalhash_types /home/soilih/_opam/lib/base/caml/caml.cmxa /home/soilih/_opam/lib/base/shadow_stdlib/shadow_stdlib.cmxa /home/soilih/_opam/lib/base/base.cmxa -I /home/soilih/_opam/lib/base /home/soilih/_opam/lib/fieldslib/fieldslib.cmxa /home/soilih/_opam/lib/base64/base64.cmxa /home/soilih/_opam/lib/stdlib-shims/stdlib_shims.cmxa /home/soilih/_opam/lib/cohttp/cohttp.cmxa /home/soilih/_opam/lib/fmt/fmt.cmxa /home/soilih/_opam/lib/logs/logs.cmxa /home/soilih/_opam/lib/logs/logs_lwt.cmxa /home/soilih/_opam/lib/ocaml/unix.cmxa -I /home/soilih/_opam/lib/ocaml /home/soilih/_opam/lib/ocaml/bigarray.cmxa -I /home/soilih/_opam/lib/ocaml /home/soilih/_opam/lib/parsexp/parsexp.cmxa /home/soilih/_opam/lib/sexplib/sexplib.cmxa /home/soilih/_opam/lib/macaddr/macaddr.cmxa /home/soilih/_opam/lib/astring/astring.cmxa /home/soilih/_opam/lib/domain-name/domain_name.cmxa /home/soilih/_opam/lib/ipaddr/ipaddr.cmxa /home/soilih/_opam/lib/ipaddr-sexp/ipaddr_sexp.cmxa /home/soilih/_opam/lib/conduit/conduit.cmxa /home/soilih/_opam/lib/conduit-lwt/conduit_lwt.cmxa /home/soilih/_opam/lib/mmap/mmap.cmxa /home/soilih/_opam/lib/ocplib-endian/ocplib_endian.cmxa /home/soilih/_opam/lib/ocplib-endian/bigstring/ocplib_endian_bigstring.cmxa /home/soilih/_opam/lib/ocaml/threads/threads.cmxa -I /home/soilih/_opam/lib/ocaml /home/soilih/_opam/lib/lwt/unix/lwt_unix.cmxa -I /home/soilih/_opam/lib/lwt/unix /home/soilih/_opam/lib/uri/services/uri_services.cmxa /home/soilih/_opam/lib/ipaddr/unix/ipaddr_unix.cmxa /home/soilih/_opam/lib/conduit-lwt-unix/conduit_lwt_unix.cmxa /home/soilih/_opam/lib/magic-mime/magic_mime_library.cmxa /home/soilih/_opam/lib/cohttp-lwt/cohttp_lwt.cmxa /home/soilih/_opam/lib/cohttp-lwt-unix/cohttp_lwt_unix.cmxa .exemple.eobjs/native/dune__exe__Exemple.cmx)

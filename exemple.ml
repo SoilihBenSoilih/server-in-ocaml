@@ -8,7 +8,6 @@ open Lwt
 let rec listify (json):int list list =
   let rec intify (list):int list =
     match list with
-    "modifié"
       | [] -> []
       | (`Int x)::rest -> x::(intify rest)
       | _ -> raise (Json_error "Does not support")
